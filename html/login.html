@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-3 d-flex flex-column flex-shrink-0 p-3 bg-light" id="sidebar" style="width: 280px; height: 100vh">
+            <a href="../index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="../img/cartoon-witch.svg" width="40" height="32">
+                <span class="fs-4">iShadow Chat</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="#Login" class="nav-link link-dark btn-login">
+                        <img class="bi me-2" src="../img/box-arrow-in-left.svg" width="16" height="16">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html" class="nav-link link-dark btn-profile">
+                        <img class="bi me-2" src="../img/person-square.svg" width="16" height="16">
+
+                    </a>
+                </li>
+                <li>
+                    <a href="./chats.html" class="nav-link link-dark btn-rooms">
+                        <img class="bi me-2" src="../img/grid.svg" width="16" height="16">
+                        Rooms
+                    </a>
+                </li>
+                <li>
+                    <a href="./users.html" class="nav-link link-dark btn-users">
+                        <img class="bi me-2" src="../img/person-circle.svg" width="16" height="16">
+                        Users
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" class="nav-link link-dark btn-logout">
+                        <img class="bi me-2" src="../img/box-arrow-right.svg" width="16" height="16">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+            <hr>
+        </div>
+        <div class="col-md-9 d-flex flex-column flex-shrink-0 p-3 bg-light" id="body-chats" style="height: 100vh">
+            <span class="fs-4 align-items-center link-dark text-decoration-none">Welcome!</span>
+            <hr>
+            <form class="row g-3">
+                <div class="col-auto">
+                    <label for="loginLoginInput" class="form-label">Login</label>
+                    <input type="text" class="form-control" id="loginLoginInput" placeholder="Username">
+                </div>
+                <div class="col-auto">
+                    <label for="loginPasswordInput" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="loginPasswordInput" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary mb-3" id="submit-login">Confirm identity</button>
+                </div>
+            </form>
+            <span class="text-danger text-decoration-none login-errors"></span>
+            <br>
+            <div>If you don't have "Login" and "Password" you can register <a href="./registration.html" class="link-dark btn-register">here</a></div>
+        </div>
+    </div>
+</div>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/sidebars.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>

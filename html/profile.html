@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 d-flex flex-column flex-shrink-0 p-3 bg-light" id="sidebar" style="width: 280px; height: 100vh">
+                <a href="../index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <img src="../img/cartoon-witch.svg" width="40" height="32" alt="logo">
+                    <span class="fs-4">iShadow Chat</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="./login.html" class="nav-link link-dark btn-login">
+                            <img class="bi me-2" src="../img/box-arrow-in-left.svg" width="16" height="16" alt="login">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Profile" class="nav-link link-dark btn-profile">
+                            <img class="bi me-2" src="../img/person-square.svg" width="16" height="16" alt="profile">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./chats.html" class="nav-link link-dark btn-rooms">
+                            <img class="bi me-2" src="../img/grid.svg" width="16" height="16" alt="rooms">
+                            Rooms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./users.html" class="nav-link link-dark btn-users">
+                            <img class="bi me-2" src="../img/person-circle.svg" width="16" height="16" alt="users">
+                            Users
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html" class="nav-link link-dark btn-logout">
+                            <img class="bi me-2" src="../img/box-arrow-right.svg" width="16" height="16" alt="logout">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+            <div class="col-md-9 d-flex flex-column flex-shrink-0 p-3 bg-light align-items-between" id="body-chats" style="height: 100vh">
+                <span class="fs-4 align-items-center link-dark text-decoration-none">Profile</span>
+                <hr>
+                <div class="row g-3" style = "height: 87%;">
+                    <div class="row g-3">
+                        <div class="col-4" style = "width: 220px; height: 220px;">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <img src="../img/person.svg" class="rounded float-center img-thumbnail" id = "avatar-image" alt="avatar" style = "width: 200px; height: 200px;">
+                                </div>
+                            </div>
+                            <div class="row g-3 justify-content-center">
+                                <a href="#upload" class="col-auto" id="upload-photo">
+                                    <img class="bi me-2" src="../img/upload.svg"  width="16" height="16" alt="upload">
+                                </a>
+                                <a href="#delete" class="col-auto" id="delete-photo">
+                                    <img class="bi me-2" src="../img/trash-fill.svg"  width="16" height="16" alt="delete">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3" id="group-upload">
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="inputUploadFile" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            <button class="btn btn-outline-secondary" type="button" id="submitFileUpload">Upload</button>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <label for="updLoginInput" class="form-label">Login</label>
+                            <input type="text" class="form-control" id="updLoginInput" placeholder="Username">
+                        </div>
+                        <div class="col-auto">
+                            <label for="updEmailInput" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="updEmailInput" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <label for="updFNInput" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="updFNInput" placeholder="First name">
+                        </div>
+                        <div class="col-auto">
+                            <label for="updLNInput" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="updLNInput" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary mb-3 submit-update-user">Update information</button>
+                        </div>
+                        <div class="col-auto">
+                            <a href="./change-password.html" class="btn btn-primary mb-3">Change password</a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="./private-messages.html" class="btn btn-primary mb-3">Private messages</a>
+                        </div>
+                    </div>
+                    <span class="text-danger text-decoration-none update-errors"></span>
+                    <span class="text-success text-decoration-none update-done"></span>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/sidebars.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
